@@ -1,0 +1,19 @@
+{
+  "name": "julied_dev.github.io",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julieed-971/JulieD_dev.github.io.git"
+  },
+  "author": "Julie Dedieu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Julieed-971/JulieD_dev.github.io/issues"
+  },
+  "homepage": "https://github.com/Julieed-971/JulieD_dev.github.io#readme"
+}
