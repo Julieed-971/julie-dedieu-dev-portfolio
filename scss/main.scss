@@ -141,6 +141,7 @@ main {
         object-fit: cover;
         object-position: 25% 0%;
         border: 3px #FFF solid;
+        border-radius: 10px;
 
         &:hover {
             opacity: 0.5;
