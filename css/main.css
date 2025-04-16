@@ -100,7 +100,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url("../img/jeremy-billey-FzDVSUeBYYA-unsplash.jpg");
+    background: url("../img/volodymyr-dobrovolskyy-KrYbarbAx5s-unsplash.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -188,6 +188,7 @@ main {
 
 .boxes {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; }
@@ -271,7 +272,15 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  .main {
+    padding: 2rem; }
+    .main #home h1 {
+      margin-top: 10vh; }
+  .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes span,
+  .boxes .text-contact {
+    font-size: 1.5rem; } }
