@@ -186,6 +186,24 @@ main {
       border-color: #52a7bc;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #FFF solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #52a7bc;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
