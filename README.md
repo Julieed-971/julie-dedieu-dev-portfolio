@@ -2,6 +2,8 @@
 
 I have build a responsive website that will display images, links, a pdf resume and description. This is my first personal portfolio project and it was build as an Holberton School project.
 
+<a href="https://julieed-971.github.io/julie-dedieu-dev-portfolio/">My First Portfolio</a>
+
 ## Files Included
 
 
