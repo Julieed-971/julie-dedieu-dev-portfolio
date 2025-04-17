@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "description": "Responsive portfolio website",
   "main": "index.js",
-  "homepage": "https://julieed-971.github.io/JulieD_dev.github.io/",
+  "homepage": "https://julieed-971.github.io/julie-dedieu-dev-portfolio/",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Julieed-971/JulieD_dev.github.io.git"
+    "url": "git+https://github.com/Julieed-971/julie-dedieu-dev-portfolio"
   },
   "author": "Julie Dedieu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Julieed-971/JulieD_dev.github.io/issues"
+    "url": "https://github.com/Julieed-971/julie-dedieu-dev-portfolio/issues"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
