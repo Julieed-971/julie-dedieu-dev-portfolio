@@ -10,6 +10,16 @@
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .resume {
+        margin: 2rem 0 0 0;
+        height: 50rem;
+        padding: 0;
+        
+        embed {
+            width: 100%;
+        }
+    }
 }
 
 // Tablets & Small Laptops
@@ -63,6 +73,16 @@
         grid-template-columns: 1fr;
     }
 
+    .resume {
+        margin: 2rem 0 0 0;
+        height: 1rem;
+        padding: 0;
+        
+        embed {
+            width: 100%;
+        }
+    }
+
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -80,6 +100,16 @@
     .lg-heading {
         margin-top: 1rem;
         font-size: 5rem;
+    }
+
+    .resume {
+        margin: 2rem 0 0 0;
+        height: 30rem;
+        padding: 0;
+        
+        embed {
+            width: 100%;
+        }
     }
 
     .projects {
