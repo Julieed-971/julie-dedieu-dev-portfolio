@@ -17,6 +17,8 @@
     "bio_2": "This lead me to work as a Program Coordinator at CIEE Toulouse where I coordinated College Study Abroad programs and where the idea for my <a class='text-secondary' href='https://julieed-971.github.io/CIEE_Toulouse_Website_Public/'>first solo web project</a> came from.",
     "bio_3": "Since I have a deep and detailed understanding of my client needs, I plan to keep on working on this project as a portfolio project for my specialization as a Fullstack Developer at Holberton School.",
     "bio_4": "Operating a career switch into web development let me pursue my lifelong passion for computer science. Combining my previous professional experience and new skills, I worked as a Fullstack PHP/Symfony developer at <a class=‘text-secondary’ href=‘https://www.agence-cerberus.fr/’>Agence Cerberus</a> and am now looking for a professional training contract to complete my education and pursue a career in web development.",
+    "see_resume": "View",
+    "download_resume": "Download",
     "job1_company": "Agence Cerberus",
     "job1_title": "Full-Stack Developer Apprentice",
     "job1_item1": "Development of new features: Design and implementation of new features in Symfony for Actusite, a CMS dedicated to regulated heritage professions",

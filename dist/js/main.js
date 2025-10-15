@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   function updateLanguageButton(lang) {
     const langConfig = languages[lang];
-    langText.textContent = langConfig.label;
+    // Show the OPPOSITE language (the one we'll switch TO)
+    const targetLang = lang === 'fr' ? 'en' : 'fr';
+    langText.textContent = languages[targetLang].label;
     languageToggle.setAttribute('aria-label', langConfig.ariaLabel);
   }
 
