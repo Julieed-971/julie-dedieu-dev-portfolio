@@ -1,0 +1,5 @@
+#149651, #ffffff
+#166963, #ffffff
+#12375a, #ffffff
+#181c4b, #ffffff
+#070024, #ffffff

@@ -1,220 +1,313 @@
-@import 'config';
-@import 'menu';
+@use "sass:color";
+@use "config" as *;
+@use "menu";
+@use "mobile";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    @include background;
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+  @include background;
+  background: $navy-blue;
+  color: set-text-color($midnight-purple);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 // Headings
-h1, h2, h3 {
-    margin: 0;
-    font-weight: 500;
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 500;
 
-    &.lg-heading {
-        font-size: 5rem;
-    }
+  &.lg-heading {
+    font-size: 5rem;
+  }
 
-    &.sm-heading {
-        border-radius: 10px;
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, $amount: 2), 0.5);
-    }
+  &.sm-heading {
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(color.adjust($deep-indigo, $lightness: 2%), 0.5);
+  }
 }
 
 a {
-    color: #FFFF;
-    text-decoration: none;
+  color: #ffff;
+  text-decoration: none;
 }
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 .text-secondary {
-    color: $secondary-color;
+  color: $electric-teal;
+  text-shadow: 0 0 10px rgba($electric-teal, 0.4);
 }
 
 main {
-    padding: 4rem;
-    // height: 100%;
-    min-height: calc(100vh - 60px);
+  padding: 4rem;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
-    .icons {
-        margin-top: 1rem;
+  .icons {
+    margin-top: 1rem;
 
-        a {
-            padding: 0.4rem;
+    a {
+      padding: 0.4rem;
 
-            &:hover {
-                color: $secondary-color;
-                @include easeOut();
-            }
-        }
+      &:hover {
+        color: $electric-teal;
+        @include fastTransition;
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px rgba($electric-teal, 0.6));
+      }
     }
+  }
 
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 20vh;
-        }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
     }
+  }
 }
 
 .about-info {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas: 
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioresume bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  height: fit-content;
 
-    .bio-image {
-        grid-area: bioimage;
-        margin: auto;
-        border-radius: 50%;
-        border: $secondary-color 3px solid;
+  .bio-resume {
+    display: grid;
+    grid-area: bioresume;
+    grid-template-areas:
+      "bioimage"
+      "bioresumetitle"
+      "biofiles";
+    margin: auto;
+  }
+
+  .bio-image {
+    grid-area: bioimage;
+    border-radius: 50%;
+    border: 3px solid $electric-teal;
+    box-shadow: 0 0 30px rgba($electric-teal, 0.4);
+    @include fastTransition;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba($electric-teal, 0.6);
     }
-    
-    .bio {
-        grid-area: bio;
-        font-size: 1.5rem;
+  }
+
+  .bio-resume-title {
+    grid-area: bioresumetitle;
+    text-align: center;
+    font-size: 26px;
+    margin: 50px auto;
+  }
+
+  .bio-files {
+    grid-area: biofiles;
+    margin: 50px auto;
+
+    button {
+      @include gradient-bg($midnight-purple, $deep-indigo);
+      color: #fff;
+      border: 2px solid rgba($electric-teal, 0.5);
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 8px 12px;
+      gap: 6px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      @include fastTransition;
+
+      &:hover {
+        @include gradient-bg($electric-teal, $emerald-green);
+        border-color: $electric-teal;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3),
+          0 0 20px rgba($electric-teal, 0.4);
+      }
     }
-    
-    .job-1 {
-        grid-area: job1;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: rgba($deep-indigo, 0.4);
+    padding: 1rem;
+    border: 1px solid rgba($electric-teal, 0.3);
+    border-bottom: 3px solid $electric-teal;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    @include fastTransition;
+
+    &:hover {
+      background: rgba($deep-indigo, 0.6);
+      border-color: $electric-teal;
+      @include lift-hover;
+      @include glow-effect($electric-teal, 0.3);
     }
-    
-    .job-2 {
-        grid-area: job2;
-    }
-    
-    .job-3 {
-        grid-area: job3;
-    }
-    
-    .job {
-        background: lighten($primary-color, $amount: 5);
-        padding: 1rem;
-        border-bottom: $secondary-color 5px solid;
-        border-radius: 10px;
-    }
+  }
 }
 
 .resume {
-    display: flex;
-    margin-top: 10vh;
-    justify-content: center;
-    height: 120vh;
-    width: 100%;
-    
-    embed {
-        width: 60%;
-        height: 100%;
-        border: $secondary-color 2px solid;
-        border-radius: 10px;
-    }
+  display: flex;
+  margin-top: 10vh;
+  justify-content: center;
+  height: 120vh;
+  width: 100%;
+
+  embed {
+    width: 60%;
+    height: 100%;
+    border: 2px solid $electric-teal;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba($electric-teal, 0.2);
+  }
 }
 
 // Work/Projects
 .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    // color: set-text-color($primary-color);
-    img {
-        width: 100%;
-        height: 180px;
-        overflow: hidden;
-        object-fit: cover;
-        object-position: 25% 0%;
-        border: 3px #FFF solid;
-        border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: 25% 0%;
+    border: 3px #fff solid;
+    border-radius: 10px;
+    @include fastTransition;
 
-        &:hover {
-            opacity: 0.5;
-            border-color: $secondary-color;
-            @include easeOut
-        }
+    &:hover {
+      opacity: 0.8;
+      border-color: $electric-teal;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba($electric-teal, 0.5);
     }
+  }
 
-    span {
-        margin-left: 0.7rem;
-    }
+  span {
+    margin-left: 0.7rem;
+  }
 }
 
 // Contact Page
 .boxes {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
-    div {
-        font-size: 2rem;
-        border: 3px #FFF solid;
-        padding:  1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        @include easeOut;
-        border-radius: 10px;
+  div {
+    font-size: 2rem;
+    border: 2px solid rgba($electric-teal, 0.5);
+    background: rgba($deep-indigo, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    @include fastTransition;
 
-        &:hover {
-            padding: 0.5rem 1.5rem;
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
+    &:hover {
+      padding: 1.5rem 2.5rem;
+      @include gradient-bg($electric-teal, $emerald-green);
+      border-color: $electric-teal;
+      color: $midnight-purple;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba($electric-teal, 0.6);
 
-            span {
-                color: set-text-color($secondary-color);
-            }
-        }
+      span {
+        color: $midnight-purple;
+        font-weight: 600;
+      }
     }
+  }
 }
 
 // Button Styles
 .btn {
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.3rem;
-    border-radius: 15px;
-    
-    &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-    }
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  border-radius: 15px;
+
+  &:hover {
+    @include gradient-bg($electric-teal, $emerald-green);
+    color: $midnight-purple;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2),
+      0 0 15px rgba($electric-teal, 0.4);
+  }
+
+  &:focus {
+    outline: 2px solid $electric-teal;
+    outline-offset: 3px;
+  }
 }
 
 .btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
+  @extend .btn;
+  @include gradient-bg($midnight-purple, $deep-indigo);
+  border: 1px solid rgba($electric-teal, 0.3);
+  color: set-text-color($midnight-purple);
 }
 
 .btn-light {
-    @extend .btn;
-    background: lighten($primary-color, 10);
-    color: set-text-color($primary-color);
+  @extend .btn;
+  @include gradient-bg($midnight-purple, $navy-blue);
+  border: 1px solid rgba($electric-teal, 0.3);
+  color: set-text-color($midnight-purple);
 }
 
 #main-footer {
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 60px;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(to top, $midnight-purple 0%, $navy-blue 100%);
+  border-top: 1px solid rgba($electric-teal, 0.2);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+  color: set-text-color($midnight-purple);
+  height: 60px;
 }
-
-@import 'mobile';

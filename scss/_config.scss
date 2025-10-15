@@ -1,64 +1,104 @@
+// ============================================================
+// COLOR PALETTE - Modern Purple-Teal Theme
+// ============================================================
+
+@use "sass:color";
+
+// Base Colors
 $primary-color: #013f5c;
 $secondary-color: #52a7bc;
+// Modern Color Palette
+$midnight-purple: #070024;
+$deep-indigo: #181c4b;
+$navy-blue: #12375a;
+$deep-teal: #166963;
+$emerald-green: #149651;
+$electric-teal: #1dd3b0;
+
+// Configuration
 $show-home-image: true;
 $home-image: url("../img/volodymyr-dobrovolskyy-KrYbarbAx5s-unsplash.jpg");
-$background-opacity: 0.7;
+$background-opacity: 0.85;
+
+// ============================================================
+// MIXINS
+// ============================================================
 
 @mixin easeOut {
-    transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
+@mixin fastTransition {
+  transition: all 0.3s ease;
+}
+
+@mixin gradient-bg($color1, $color2) {
+  background: linear-gradient(135deg, $color1 0%, $color2 100%);
+}
+
+@mixin glow-effect($color, $opacity: 0.4) {
+  box-shadow: 0 0 20px rgba($color, $opacity);
+}
+
+@mixin lift-hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 @mixin background {
-    @if $show-home-image {
-        &#bg-img {
-            background: $home-image;
-            background-attachment: fixed;
-            background-size: cover;
-            
-            &:after {
-                content:'';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background: rgba($primary-color, $background-opacity);
-            }
-        }
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(
+          135deg,
+          rgba($midnight-purple, $background-opacity) 0%,
+          rgba($navy-blue, $background-opacity) 100%
+        );
+      }
     }
+  }
 }
 
 // Set Text Color
 @function set-text-color($color) {
-    @if (lightness($color) > 50) {
-        @return #000;
-    } @else {
-        @return #FFFF;
-    }
+  @if (color.channel($color, "lightness", $space: hsl) > 50) {
+    @return #000;
+  } @else {
+    @return #ffff;
+  }
 }
 
 // Media Query Mixins
 @mixin mediaSm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
 
 @mixin mediaMd {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
-        @content;
-    }
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
 
 @mixin mediaXl {
-    @media screen and (min-width: 1171px) {
-        @content;
-    }
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
 }
