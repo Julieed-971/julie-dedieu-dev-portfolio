@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   async function fetchLanguageTranslation(lang) {
-    const response = await fetch(`/dist/translation/${lang}.json`);
+    const response = await fetch(`translation/${lang}.json`);
     if (!response.ok) {
       throw new Error(`Failed to load ${lang}.json`);
     }
