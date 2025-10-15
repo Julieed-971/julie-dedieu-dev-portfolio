@@ -6,7 +6,6 @@ I have build a responsive website that will display images, links, a pdf resume 
 
 ## Files Included
 
-
 - index.html
 - main.css in css folder
 - img folder
