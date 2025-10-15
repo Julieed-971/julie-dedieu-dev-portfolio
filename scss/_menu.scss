@@ -1,46 +1,6 @@
 @use "config" as *;
 
-// Language Toggle Button
-.language-toggle {
-  position: absolute;
-  @include gradient-bg($midnight-purple, $deep-indigo);
-  color: #fff;
-  border: 2px solid rgba($electric-teal, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-  left: 12px;
-  top: 28px;
-  cursor: pointer;
-  padding: 8px 12px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  @include fastTransition;
 
-  &:hover {
-    @include gradient-bg($electric-teal, $emerald-green);
-    border-color: $electric-teal;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3),
-      0 0 20px rgba($electric-teal, 0.4);
-  }
-
-  &:focus {
-    outline: 2px solid $electric-teal;
-    outline-offset: 2px;
-  }
-
-  .fa-globe {
-    font-size: 18px;
-  }
-
-  .lang-text {
-    font-weight: bold;
-    font-size: 14px;
-  }
-}
 // Menu Button
 .menu-btn {
   position: absolute;
