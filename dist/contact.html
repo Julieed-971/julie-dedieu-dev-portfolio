@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Contact Me</title>
+    <title data-i18n="page_title_contact">Contactez-moi</title>
   </head>
   <body>
     <header>
+      <button class="language-toggle" aria-label="Switch language to English">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="lang-text">FR</span>
+      </button>
       <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -24,35 +28,33 @@
           <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="./index.html" class="nav-link"> Home </a>
-          </li>
-          <li class="nav-item">
-            <a href="./about.html" class="nav-link"> About Me </a>
-          </li>
-          <li class="nav-item">
-            <a href="./work.html" class="nav-link"> My Work </a>
-          </li>
           <li class="nav-item current">
-            <a href="./contact.html" class="nav-link"> How To Reach Me </a>
+            <a href="./index.html" class="nav-link" data-i18n="nav_home">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link" data-i18n="nav_about">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a href="./work.html" class="nav-link" data-i18n="nav_work">Mon travail</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link" data-i18n="nav_contact">Me contacter</a>
           </li>
         </ul>
       </nav>
     </header>
     <main id="contact">
-      <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
-      <h2 class="sm-heading">This is how you can reach me...</h2>
+      <h1 class="lg-heading"><span data-i18n="contact_heading">Contactez</span> <span class="text-secondary" data-i18n="contact_heading_span">moi</span></h1>
+      <h2 class="sm-heading" data-i18n="contact_subtitle">Comment me joindre...</h2>
       <div class="boxes">
         <div class="text-contact">
           <span class="text-secondary">
-            <a href="mailto:julie.dedieu1@gmail.com">Email Me</a>
+            <a href="mailto:julie.dedieu1@gmail.com" data-i18n="contact_email">Mon e-mail</a>
           </span>
         </div>
         <div class="text-contact">
           <span class="text-secondary">
-            <a href="https://www.linkedin.com/in/julie-dedieu-a5404394/"
-              >My LinkedIn Profile</a
-            >
+            <a href="https://www.linkedin.com/in/julie-dedieu-a5404394/" data-i18n="contact_linkedin">Mon profil LinkedIn</a>
           </span>
         </div>
       </div>
