@@ -16,7 +16,7 @@
     <header>
       <button class="language-toggle" aria-label="Switch language to English">
         <i class="fas fa-globe" aria-hidden="true"></i>
-        <span class="lang-text">FR</span>
+        <span class="lang-text">EN</span>
       </button>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -47,11 +47,30 @@
       <h1 class="lg-heading"><span data-i18n="head_about">À propos</span> <span class="text-secondary" data-i18n="head_me">de moi</span></h1>
       <h2 class="sm-heading" data-i18n="head_subtitle">En quelques mots...</h2>
       <div class="about-info">
+        <div class="bio-resume">
         <img
           src="img/portrait_big.jpg"
           alt="Photo of Julie Dedieu"
           class="bio-image"
         />
+        <div class="bio-files">
+          <div class="bio-resume-title">
+            <h3 class="sm-heading">Mon CV</h3>
+          </div>
+          <a href="./doc/Julie_Dedieu_resume.pdf" target="_blank">
+            <button>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <span data-i18n="see_resume">Voir</span>
+            </button>
+          </a>
+          <a href="./doc/Julie_Dedieu_resume.pdf" download="Julie_Dedieu_resume">
+            <button>
+              <i class="fa fa-download" aria-hidden="true"></i>
+              <span data-i18n="download_resume">Télécharger</span>
+            </button>
+          </a>
+        </div>
+      </div>
         <div class="bio">
           <h3 class="text-secondary" data-i18n="bio_title">BIO</h3>
           <p data-i18n="bio_1">
@@ -112,13 +131,7 @@
           </ul>
         </div>
       </div>
-      <div class="resume">
-        <embed
-          class="pdf"
-          src="./doc/Julie_Dedieu_resume.pdf"
-          type="application/pdf"
-        />
-      </div>
+
     </main>
     <footer id="main-footer">Copyrights &copy; <span id="year"></span></footer>
     <script src="js/main.js"></script>
