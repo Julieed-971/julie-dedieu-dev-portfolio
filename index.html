@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Welcome to my portfolio</title>
+    <title data-i18n="welcome_message">Bienvenue sur mon portfolio</title>
   </head>
   <body id="bg-img">
     <header>
+      <button class="language-toggle" aria-label="Switch language to English">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="lang-text">EN</span>
+      </button>
       <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -25,16 +29,16 @@
         </div>
         <ul class="menu-nav">
           <li class="nav-item current">
-            <a href="./index.html" class="nav-link"> Home </a>
+            <a href="./index.html" class="nav-link" data-i18n="nav_home">Accueil</a>
           </li>
           <li class="nav-item">
-            <a href="./about.html" class="nav-link"> About Me </a>
+            <a href="./about.html" class="nav-link" data-i18n="nav_about">À propos</a>
           </li>
           <li class="nav-item">
-            <a href="./work.html" class="nav-link"> My Work </a>
+            <a href="./work.html" class="nav-link" data-i18n="nav_work">Mon travail</a>
           </li>
           <li class="nav-item">
-            <a href="./contact.html" class="nav-link"> How To Reach Me </a>
+            <a href="./contact.html" class="nav-link" data-i18n="nav_contact">Me contacter</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +47,7 @@
       <h1 class="lg-heading">
         Julie <span class="text-secondary">Dedieu</span>
       </h1>
-      <h2 class="sm-heading">Fullstack Web Developer</h2>
+      <h2 class="sm-heading" data-i18n="subtitle">Développeuse Web Fullstack</h2>
       <div class="icons">
         <a href="https://www.linkedin.com/in/julie-dedieu-a5404394/">
           <i class="fab fa-linkedin fa-2x"></i>

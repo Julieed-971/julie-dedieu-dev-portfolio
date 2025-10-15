@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>About Me</title>
+    <title data-i18n="page_title_about">À propos de moi</title>
   </head>
   <body>
     <header>
+      <button class="language-toggle" aria-label="Switch language to English">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <span class="lang-text">EN</span>
+      </button>
       <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -24,124 +28,110 @@
           <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="./index.html" class="nav-link"> Home </a>
-          </li>
           <li class="nav-item current">
-            <a href="./about.html" class="nav-link"> About Me </a>
+            <a href="./index.html" class="nav-link" data-i18n="nav_home">Accueil</a>
           </li>
           <li class="nav-item">
-            <a href="./work.html" class="nav-link"> My Work </a>
+            <a href="./about.html" class="nav-link" data-i18n="nav_about">À propos</a>
           </li>
           <li class="nav-item">
-            <a href="./contact.html" class="nav-link"> How To Reach Me </a>
+            <a href="./work.html" class="nav-link" data-i18n="nav_work">Mon travail</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link" data-i18n="nav_contact">Me contacter</a>
           </li>
         </ul>
       </nav>
     </header>
     <main id="about">
-      <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
-      <h2 class="sm-heading">Let me tell you a few things...</h2>
+      <h1 class="lg-heading"><span data-i18n="head_about">À propos</span> <span class="text-secondary" data-i18n="head_me">de moi</span></h1>
+      <h2 class="sm-heading" data-i18n="head_subtitle">En quelques mots...</h2>
       <div class="about-info">
+        <div class="bio-resume">
         <img
           src="img/portrait_big.jpg"
           alt="Photo of Julie Dedieu"
           class="bio-image"
         />
+        <div class="bio-files">
+          <div class="bio-resume-title">
+            <h3 class="sm-heading">Mon CV</h3>
+          </div>
+          <a href="./doc/Julie_Dedieu_resume.pdf" target="_blank">
+            <button>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <span data-i18n="see_resume">Voir</span>
+            </button>
+          </a>
+          <a href="./doc/Julie_Dedieu_resume.pdf" download="Julie_Dedieu_resume">
+            <button>
+              <i class="fa fa-download" aria-hidden="true"></i>
+              <span data-i18n="download_resume">Télécharger</span>
+            </button>
+          </a>
+        </div>
+      </div>
         <div class="bio">
-          <h3 class="text-secondary">BIO</h3>
-          <p>
-            I am passionate about learning new things, especially languages be
-            it human or computer. I started with human's one, graduating in
-            Japanese and English and then graduating in teaching French as a
-            Foreign Language.
+          <h3 class="text-secondary" data-i18n="bio_title">BIO</h3>
+          <p data-i18n="bio_1">
+           J'adore apprendre de nouvelles choses, en particulier les langues humaines et les langages informatiques. J'ai commencé par les langues humaines, en obtenant un diplôme en japonais et en anglais, puis un diplôme d'enseignement du Français Langue Étrangère.
           </p>
-          <p>
-            This lead me to work as a Program Coordinator at CIEE Toulouse where
-            I coordinated College Study Abroad programs and where the idea for
-            my
-            <a
-              class="text-secondary"
-              href="https://julieed-971.github.io/CIEE_Toulouse_Website_Public/"
-              >first solo web project</a
-            >
-            came from.
+          <p data-i18n="bio_2">
+           Cela m'a conduit à travailler comme coordinatrice de programmes à CIEE Toulouse, où j'ai coordonné des programmes d'études universitaires à l'étranger et d'où l'idée de mon <a class='text-secondary' href='https://julieed-971.github.io/CIEE_Toulouse_Website_Public/'>premier projet web solo</a> est née.
           </p>
-          <p>
-            Since I have a deep and detailed understanding of my client needs, I
-            plan to keep on working on this project as a portfolio project for
-            my specialization as a Fullstack Developer at Holberton School.
+          <p data-i18n="bio_3">
+            Bénéficiant d'une compréhension détaillée des besoins de mon client, j'ai l'intention de continuer à travailler sur ce projet en tant que projet de portfolio pour ma spécialisation en développement Fullstack à Holberton School.
           </p>
-          <p>
-            Operating a career switch into web development let me pursue my
-            lifelong passion for computer science. Combining my former
-            professional experience with my newly acquired skills I am now
-            working as a PHP/Symfony Fullstack Developer at
-            <a class="text-secondary" href="https://www.agence-cerberus.fr/"
-              >Agence Cerberus</a
-            >.
+          <p data-i18n="bio_4">
+            Ma reconversion professionnelle dans le développement web m'a permis de poursuivre ma passion de toujours pour l'informatique. Combinant mon ancienne expérience professionnelle et mes nouvelles compétences, j'ai travaillé en tant que développeuse Fullstack PHP/Symfony chez <a class='text-secondary' href='https://www.agence-cerberus.fr/'>Agence Cerberus</a> et je recherche un contrat de professionnalisation afin de finaliser ma formation et poursuivre une carrière dans le développement web.
           </p>
         </div>
         <div class="job job-1">
-          <h3>Agence Cerberus</h3>
-          <h6>Full-Stack Developer Apprentice</h6>
+          <h3 data-i18n="job1_company">Agence Cerberus</h3>
+          <h6 data-i18n="job1_title">Développeuse Full-Stack en alternance</h6>
           <ul>
-            <li>
-              Development of new functionalities: Design and implement new
-              functionalities for web applications using the Symfony framework.
+            <li data-i18n="job1_item1">
+              Conception et implémentation de nouvelles fonctionnalités en Symfony pour Actusite, CMS dédié aux professions du patrimoine réglementé
             </li>
-            <li>
-              Maintenance and enhancement: Maintain existing applications,
-              correct bugs and optimize performance.
+            <li data-i18n="job1_item2">
+              Maintenance de l’application, correction les bugs et optimisation des performances
             </li>
-            <li>
-              API integration: Work on integrating external APIs (such as
-              Facebook, Linkedin, Instagram, etc.).
+            <li data-i18n="job1_item3">
+              Développement en interne d’un MVP pour la prospection, en Symfony 7 avec intégration d'API externes (Mistral, Gemini, WhatCMS), en mode SCRUM
             </li>
-            <li>
-              Team collaboration: Work closely with other developers and project
-              managers to ensure project consistency and efficiency.
+            <li data-i18n="job1_item4">
+              Collaboration avec les autres développeurs et chefs de projet pour assurer la cohérence et l'efficacité des projets
             </li>
           </ul>
         </div>
         <div class="job job-2">
-          <h3>Holberton School</h3>
-          <h6>Student Full-Stack Developer</h6>
+          <h3 data-i18n="job2_company">Holberton School</h3>
+          <h6 data-i18n="job2_title">Étudiante Développeuse Full-Stack</h6>
           <ul>
-            <li>
-              Portfolio Project: development of a Single Page Application for
-              college study abroad program host families recruitment
+            <li data-i18n="job2_item1">
+              Projet Portfolio : développement d'une application monopage pour le recrutement de familles d'accueil pour un programme d'études à l'étranger
             </li>
-            <li>
-              HBNB: development of a simplified clone of the Airbnb website, in
-              several sprints, in group project
+            <li data-i18n="job2_item2">
+              HBNB : développement d'un clone simplifié du site Airbnb, en plusieurs sprints, en projet de groupe
             </li>
-            <li>Simple Shell: simplified copy of shell terminal in C</li>
-            <li>printf: simplified copy of the printf function in C</li>
+            <li data-i18n="job2_item3">Simple Shell : copie simplifiée du terminal shell en C</li>
+            <li data-i18n="job2_item4">printf : copie simplifiée de la fonction printf en C</li>
           </ul>
         </div>
         <div class="job job-3">
-          <h3>CIEE Toulouse</h3>
-          <h6>College Study Abroad Program Coordinator</h6>
+          <h3 data-i18n="job3_company">CIEE Toulouse</h3>
+          <h6 data-i18n="job3_title">Coordinatrice de programmes d'études à l'étranger</h6>
           <ul>
-            <li>
-              Management of language and academic programs, with a approach
-              focused on the needs of students
+            <li data-i18n="job3_item1">
+              Gestion de programmes linguistiques et académiques, avec une approche axée sur les besoins des étudiants
             </li>
-            <li>
-              Logistics for organizing cultural activities and educational trips
-              , ensuring continuous improvement of the experiences offered.
+            <li data-i18n="job3_item2">
+              Logistique pour l'organisation d'activités culturelles et de voyages éducatifs, en assurant l'amélioration continue des expériences offertes
             </li>
           </ul>
         </div>
       </div>
-      <div class="resume">
-        <embed
-          class="pdf"
-          src="./doc/Julie_Dedieu_resume.pdf"
-          type="application/pdf"
-        />
-      </div>
+
     </main>
     <footer id="main-footer">Copyrights &copy; <span id="year"></span></footer>
     <script src="js/main.js"></script>
