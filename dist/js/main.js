@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", async function () {
+  // Detect base path for GitHub Pages
+  const basePath = window.location.hostname === 'julieed-971.github.io'
+    ? '/julie-dedieu-dev-portfolio/'
+    : '/dist/';
+
   // Select DOM Items
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
@@ -105,7 +110,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   async function fetchLanguageTranslation(lang) {
-    const response = await fetch(`/dist/translation/${lang}.json`);
+    const response = await fetch(`${basePath}translation/${lang}.json`);
     if (!response.ok) {
       throw new Error(`Failed to load ${lang}.json`);
     }
